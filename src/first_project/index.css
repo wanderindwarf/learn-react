@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, sans-serif;
+}
+
+header {
+    background: rgba(33, 34, 42, 1);
+    height: 90px;
+    padding: 30px 25px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav > img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+nav > span {
+    color: rgba(97, 218, 251, 1);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
