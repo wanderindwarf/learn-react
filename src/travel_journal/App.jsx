@@ -1,24 +1,49 @@
-import Header from "./components/Header"
-import Entry from "./components/Entry"
-
-/**
- * Challenge: pass props to the Entry component to display
- * its data. See the `data.md` file for each prop name and its
- * value.
- * 
- * Then on the Entry component, receive and display the values
- * for those props. In the end, the page should look the same
- * as it does now, but without all the hard-coded data in the
- * component
- */
+import Header from './components/Header'
+import Entry from './components/Entry'
+import data from './data'
 
 export default function App() {
+    
+    const travelCards = data.map(entry => {
+        return(
+            <Entry 
+                key={entry.id}
+                // entry={entry}
+                {...entry}
+                // img={entry.img}
+                // title={entry.title}
+                // country={entry.country}
+                // googleMapsLink={entry.googleMapsLink}
+                // dates={entry.dates}
+                // text={entry.text}
+            />
+        )
+    })
+    
     return (
         <>
             <Header />
-            <main className="container">
-                <Entry />
+            <main className='container'>
+                {travelCards}
             </main>
         </>
     )
 }
+
+// Missing "key" prop for element in iterator
+// Missing prop validation
+
+// <Header />
+// <main className="container">
+//     <Entry 
+//         img={{ 
+//             src:
+//             alt:
+//         }}
+//         title=
+//         country=
+//         googleMapsLink=
+//         dates=
+//         text=
+//     />
+// </main>
